@@ -21,18 +21,18 @@ int main() {
 
 */
 
-int main ( ) {
-    int a;
-    bool t = true;
-    while (t) {
-        if (cin >> a) {
-            cout<< "yea";
-            t = false;
-        } else {
-            cout<< "no";
-            a = NULL;
-        }
+int proverka ( int a) {
+    while (!(cin >> a) || (cin.peek() != '\n'))
+    {
+        cin.clear();
+        while (cin.get() != '\n');
+        cout << "Input error! Repeat please..."<< endl;
     }
+    return a;
 }
-
+int main () {
+    int g ;
+    cin >> g;
+    cout << proverka(g);
+}
 
