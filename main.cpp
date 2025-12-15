@@ -29,6 +29,15 @@ int thingThatDoMainTaskGodHowIhateThis ( int *arr, int vertical, int horizantal)
     int count = 0;
     for (int j = 0; j < horizantal; ++j) {
         bool allDistinct = true;
+        int real[vertical][horizantal];
+        for (int i = 0; i < vertical * horizantal;) {
+            for (int i1 = 0; i1 < vertical; i1++) {
+                for (int i2 = 0; i2 < horizantal; i2++) {
+                    real[i1][i2] = arr[i];
+                    i++;
+                }
+            }
+        }
 
         for (int i = 0; i < vertical - 1; ++i) {
             for (int k = i + 1; k < vertical; ++k) {
